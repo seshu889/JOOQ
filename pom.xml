@@ -42,6 +42,17 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.modelmapper.extensions/modelmapper-jooq -->
+		<dependency>
+			<groupId>org.modelmapper.extensions</groupId>
+			<artifactId>modelmapper-jooq</artifactId>
+			<version>2.3.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -76,7 +87,7 @@
 							<!--Insert your DB configuration-->
 							<jdbc>
 								<driver>com.mysql.cj.jdbc.Driver</driver>
-								<url>jdbc:mysql://localhost:3306/jooq</url>
+								<url>jdbc:mysql://localhost:3306/locations</url>
 								<user>root</user>
 								<password>root</password>
 							</jdbc>
@@ -85,7 +96,7 @@
 									<name>org.jooq.meta.mysql.MySQLDatabase</name>
 									<includes>.*</includes>
 									<excludes></excludes>
-									<inputSchema>jooq</inputSchema>
+									<inputSchema>locations</inputSchema>
 								</database>
 								<generate>
 									<pojos>true</pojos>
